@@ -71,7 +71,7 @@ const Layout = ({ contract, head, chain, address, children }) => {
                 color: 'blue.100'
               }}
               as={Link}
-              href={'https://www.linkedin.com/in/braianvaylet/'}
+              href={'https://www.linkedin.com/in/tanmay-juneja-a872531b9/'}
               isExternal
               icon={<Icon as={FaLinkedin} w={7} h={7} />}
             />
@@ -84,7 +84,7 @@ const Layout = ({ contract, head, chain, address, children }) => {
                 color: 'blue.100'
               }}
               as={Link}
-              href={'https://github.com/BraianVaylet/buildspace-epic-game-ui'}
+              href={'https://github.com/tanmayjuneja8'}
               isExternal
               icon={<Icon as={FaGithub} w={7} h={7} />}
             />

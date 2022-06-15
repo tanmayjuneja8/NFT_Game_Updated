@@ -31,12 +31,9 @@ const SelectCharacter = ({ setCharacterNFT, contract, abi }) => {
     const getCharacters = async () => {
       try {
         console.log('Getting contract characters to mint')
-        // Llamamos al contracto para obtener todos los personajes minteables.
         setLoader(true)
         const charactersTxn = await gameContract.getAllDefaultCharacters()
-        // Revisa todos nuestros personajes y transforma los datos.
         const characters = charactersTxn.map((characterData) => transformCharacterData(characterData))
-        // Seteamos todos los personajes minteables en el estado.
         setCharacters(characters)
         setLoader(false)
       } catch (error) {
@@ -44,15 +41,12 @@ const SelectCharacter = ({ setCharacterNFT, contract, abi }) => {
       }
     }
 
-    // Validamos si nuestro gameContract esta ok.
-
-    // Agregamos método de devolución de llamada que se activará cuando se reciba este evento
     const onCharacterMint = async (sender, tokenId, characterIndex) => {
       console.log(
         `CharacterNFTMinted - sender: ${sender} tokenId: ${tokenId.toNumber()} characterIndex: ${characterIndex.toNumber()}`
       )
-      // Una vez que nuestro personaje NFT está acuñado, podemos obtener los metadatos de nuestro contrato
-      // y configurarlo para pasar a la Arena.
+      // Once our NFT character is minted, we can get our contract metadata
+      // and set it to pass to the Arena.
       if (gameContract) {
         setLoader(true)
         const characterNFT = await gameContract.checkIfUserHasNFT()
@@ -64,12 +58,12 @@ const SelectCharacter = ({ setCharacterNFT, contract, abi }) => {
 
     if (gameContract) {
       getCharacters()
-      // Configuramos nuestro NFT Minted Listener
+      // We configure our NFT Minted Listener
       gameContract.on('CharacterNFTMinted', onCharacterMint)
     }
 
     return () => {
-      // Cuando el componente se desmonte, limpiamos el listener
+      // When the component is unmounted, we clean the listener
       if (gameContract) {
         gameContract.off('CharacterNFTMinted', onCharacterMint)
       }

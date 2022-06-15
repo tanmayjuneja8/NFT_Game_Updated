@@ -137,7 +137,6 @@ const Arena = ({ contract, abi }) => {
 
   const runAttackAction = async () => {
     try {
-      // Seleccion de poder random del jefe.
       if (gameContract && characterPower && bossPower) {
         setLoader(true)
         setShowAttackState(false)
@@ -277,7 +276,7 @@ const Arena = ({ contract, abi }) => {
         >
           {boss && characterNFT && boss.hp !== 0
             ? showAttackState && attackState.status && attackState.message
-            : 'We defeated the boss!!! But do not relax, soon a new boss will be reborn'
+            : "We defeated the boss!!! But do not relax, he would be sending reinforcements pretty soon. 😈"
           }
         </Text>
       </Flex>

@@ -9,13 +9,13 @@ import Arena from 'components/Arena'
 import CONTRACT, { transformCharacterData } from 'utils/constants'
 import powers from 'public/powers.png'
 
-const CONTRACT_ADDRESS = CONTRACT.MY_EPIC_GAME.ADDRESS // > Nuestra direccion del contrato que desplegamos.
-const CONTRACT_ABI = CONTRACT.MY_EPIC_GAME.ABI // > Nuestro abi del contrato
+const CONTRACT_ADDRESS = CONTRACT.MY_EPIC_GAME.ADDRESS 
+const CONTRACT_ABI = CONTRACT.MY_EPIC_GAME.ABI 
 
 export default function Home () {
   const toast = useToast()
   const [loader] = useState(false)
-  const [currentAccount, setCurrentAccount] = useState('') // Almacenamos la billetera pública de nuestro usuario.
+  const [currentAccount, setCurrentAccount] = useState('') 
   const [characterNFT, setCharacterNFT] = useState(null)
   const [chainIdOk, setChainIdOk] = useState(false)
 
@@ -41,7 +41,6 @@ export default function Home () {
   const checkIfWalletIsConnected = async () => {
     try {
       const { ethereum } = window
-      // > Nos aseguramos de tener acceso a window.ethereum
       if (!ethereum) {
         console.log('Make sure you have metamask!')
         toast({
@@ -55,16 +54,12 @@ export default function Home () {
         console.log('We have the ethereum object', ethereum)
       }
 
-      // > Comprobamos si estamos autorizados a acceder a la billetera del usuario
       const accounts = await ethereum.request({ method: 'eth_accounts' })
 
       if (accounts.length !== 0) {
         const account = accounts[0]
         console.log('Found an authorized account:', account)
         setCurrentAccount(account)
-        // > Escucho eventos! caso en que un usuario llega a nuestro sitio y YA tenía su billetera conectada + autorizada.
-        // setupEventListener()
-        // > check de la red
         checkNetwork()
       } else {
         console.log('No authorized account found')
@@ -100,10 +95,8 @@ export default function Home () {
         duration: 2000,
         isClosable: true
       })
+      // enters our website for the first time.
       setCurrentAccount(accounts[0])
-      // > Escucho evenots! caso en que un usuario ingresa a nuestro sitio y conecta su billetera por primera vez.
-      // setupEventListener()
-      // > check de la red
       checkNetwork()
     } catch (error) {
       console.log(new Error(error))
@@ -137,7 +130,7 @@ export default function Home () {
   }, [])
 
   useEffect(() => {
-    // Corremos esta funcionalidad solo si tenemos nuestra wallet conectada.
+    // We run this functionality only if we have our wallet connected.
     if (currentAccount) {
       console.log('CurrentAccount:', currentAccount)
       fetchNFTMetadata()
@@ -223,7 +216,7 @@ export default function Home () {
             fontWeight={900}
             letterSpacing={'1px'}
           >
-            {"Hi 👋, I'm Braian and"}
+            {"Hi 👋, I'm Tanmay and"}
           </Text>
           <Text
             as='h3'
@@ -251,10 +244,10 @@ export default function Home () {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Text mb={5} as={'p'} fontSize={20}>Epic Game 🧙‍♂️ is a small and simple NFT game made with React and Solidity. The UI is made with Next.js and ChakraUI while the smart-contract is developed using the HardHat framework.</Text>
+                <Text mb={5} as={'p'} fontSize={20}>Epic Game 🧙‍♂️ is a demo NFT game made with React and Solidity. The UI is made with Next.js and ChakraUI while the smart-contract is developed using the HardHat framework.</Text>
                 <Text mb={5} as={'p'} fontSize={20}>To play it is necessary to have Metamask installed in your browser, be connected to the Rinkeby testnet and have test ETH to interact with the application.</Text>
                 <Text mb={5} as={'p'} fontSize={20}>You can obtain ETH in this <Link color={'blue.300'} href='https://faucets.chain.link/rinkeby' >link</Link></Text>
-                <Text mb={5} as={'p'} fontSize={20}>When you start the game you will need to choose a character, you can choose one of those listed on the platform (keep in mind that not all are the same, some differ in their attributes). For this you will need to mint your own NFT which you will use during the game… But be careful! You will only be able to mint a single NFT character with your wallet, you will not be able to reselect another one so choose carefully…</Text>
+                <Text mb={5} as={'p'} fontSize={20}>When you start the game you will need to choose a character, you can choose one of those listed on the platform (keep in mind that not all are the same, they differ a lot in their attributes). For this you will need to mint your own NFT which you will use during the game… But be careful! You will only be able to mint a single NFT character with your wallet, you will not be able to reselect another one so choose carefully…</Text>
                 <Text mb={5} as={'p'} fontSize={20}>Once you have your character you can start playing, the objective is to defeat the leader, but it is unlikely that you can do it alone, so you will need to invite your friends to select their own characters and help you defeat him...</Text>
               </AccordionPanel>
             </AccordionItem>
@@ -283,7 +276,7 @@ export default function Home () {
                   >
                     <Image src={powers.src} boxSize={'xl'} alt={'rules'} />
                   </Flex>
-                  <Text mb={5} as={'p'} fontSize={20}>Every time we select a power and attack the boss the boss will also select one of them, the winner will have the chance to attack and cause damage to the other.</Text>
+                  <Text mb={5} as={'p'} fontSize={20}>Every time we select a power and attack the boss, the boss will also select one of them, the winner will have the chance to attack and cause damage to the other.</Text>
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
