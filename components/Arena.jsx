@@ -276,7 +276,7 @@ const Arena = ({ contract, abi }) => {
         >
           {boss && characterNFT && boss.hp !== 0
             ? showAttackState && attackState.status && attackState.message
-            : "We defeated the boss!!! But do not relax, he would be sending reinforcements pretty soon. 😈"
+            : 'We defeated the boss!!! But do not relax, he would be sending reinforcements pretty soon. 😈'
           }
         </Text>
       </Flex>

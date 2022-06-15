@@ -9,13 +9,13 @@ import Arena from 'components/Arena'
 import CONTRACT, { transformCharacterData } from 'utils/constants'
 import powers from 'public/powers.png'
 
-const CONTRACT_ADDRESS = CONTRACT.MY_EPIC_GAME.ADDRESS 
-const CONTRACT_ABI = CONTRACT.MY_EPIC_GAME.ABI 
+const CONTRACT_ADDRESS = CONTRACT.MY_EPIC_GAME.ADDRESS // > TJ
+const CONTRACT_ABI = CONTRACT.MY_EPIC_GAME.ABI // > TJ
 
 export default function Home () {
   const toast = useToast()
   const [loader] = useState(false)
-  const [currentAccount, setCurrentAccount] = useState('') 
+  const [currentAccount, setCurrentAccount] = useState('') // TJ
   const [characterNFT, setCharacterNFT] = useState(null)
   const [chainIdOk, setChainIdOk] = useState(false)
 
