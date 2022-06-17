@@ -244,11 +244,11 @@ export default function Home () {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Text mb={5} as={'p'} fontSize={20}>Brute Beasts 🦾  is a demo NFT game made with React and Solidity.</Text>
-                <Text mb={5} as={'p'} fontSize={20}>To play it is necessary to have Metamask installed in your browser, be connected to the Rinkeby testnet and have test ETH to interact with the application.</Text>
-                <Text mb={5} as={'p'} fontSize={20}>You can obtain test ETH on this <Link color={'blue.300'} href='https://faucets.chain.link/rinkeby' >link.</Link></Text>
-                <Text mb={5} as={'p'} fontSize={20}>When you start the game you will need to choose a character, you can choose one of those listed on the platform (keep in mind that not all are the same, they differ a lot in their attributes). For this you will need to mint your own NFT which you will use during the game… But be careful! You will only be able to mint a single NFT character with your wallet, you will not be able to reselect another one so choose carefully.</Text>
-                <Text mb={5} as={'p'} fontSize={20}>Once you have your character you can start playing, the objective is to defeat the cruel opponent, but it is unlikely that you can do it alone, so you will need to invite your friends to select their own characters and to help you defeat him.</Text>
+                <Text mb={5} as={'p'} fontSize={20}>Brute Beasts 🦾  is a demo NFT game made with React and Solidity. <b>👨‍💻</b></Text>
+                <Text mb={5} as={'p'} fontSize={20}>To play it is necessary to have Metamask installed in your browser. <b>💸</b> <br/>(Make sure to connect to the Rinkeby testnet and transfer test ETH to interact with the application.)</Text>
+                <Text mb={5} as={'p'} fontSize={20}>You can obtain test ETH on this <Link color={'blue.300'} href='https://faucets.chain.link/rinkeby' >link.</Link> <b>🤑</b></Text>
+                <Text mb={5} as={'p'} fontSize={20}>When you start the game you will need to choose a character, you can choose one of those listed on the platform (keep in mind that not all are the same, they differ a lot in their attributes). <b>🦹</b> <br/> For this you will need to mint your own NFT which you will use during the game. But be careful! You will only be able to mint a single NFT character with your wallet. <b>🦸</b> </Text>
+                <Text mb={5} as={'p'} fontSize={20}>Once you have your character you can start playing, the objective is to defeat the cruel opponent <b>👹</b>, but it is unlikely that you can do it alone, so you will need to invite your friends to select their own characters and to help you defeat him.<b>😎</b> </Text>
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem>
