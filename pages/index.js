@@ -216,7 +216,7 @@ export default function Home () {
             fontWeight={900}
             letterSpacing={'1px'}
           >
-            {"Hi 👋, I'm Tanmay and"}
+            {'Hey there! 👋'}
           </Text>
           <Text
             as='h3'
@@ -225,7 +225,7 @@ export default function Home () {
             fontWeight={600}
             letterSpacing={'.5px'}
           >
-            Welcome to Epic Game 🧙‍♂️
+            Welcome to Brute Beasts 🦾
           </Text>
 
           <Accordion w={'100%'} allowMultiple>
@@ -237,18 +237,18 @@ export default function Home () {
                       as={'h2'}
                       fontSize={30}
                       fontWeight={'bold'}>
-                        About the project
+                        About the Game
                     </Text>
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Text mb={5} as={'p'} fontSize={20}>Epic Game 🧙‍♂️ is a demo NFT game made with React and Solidity. The UI is made with Next.js and ChakraUI while the smart-contract is developed using the HardHat framework.</Text>
+                <Text mb={5} as={'p'} fontSize={20}>Brute Beasts 🦾  is a demo NFT game made with React and Solidity.</Text>
                 <Text mb={5} as={'p'} fontSize={20}>To play it is necessary to have Metamask installed in your browser, be connected to the Rinkeby testnet and have test ETH to interact with the application.</Text>
-                <Text mb={5} as={'p'} fontSize={20}>You can obtain ETH in this <Link color={'blue.300'} href='https://faucets.chain.link/rinkeby' >link</Link></Text>
-                <Text mb={5} as={'p'} fontSize={20}>When you start the game you will need to choose a character, you can choose one of those listed on the platform (keep in mind that not all are the same, they differ a lot in their attributes). For this you will need to mint your own NFT which you will use during the game… But be careful! You will only be able to mint a single NFT character with your wallet, you will not be able to reselect another one so choose carefully…</Text>
-                <Text mb={5} as={'p'} fontSize={20}>Once you have your character you can start playing, the objective is to defeat the leader, but it is unlikely that you can do it alone, so you will need to invite your friends to select their own characters and help you defeat him...</Text>
+                <Text mb={5} as={'p'} fontSize={20}>You can obtain test ETH on this <Link color={'blue.300'} href='https://faucets.chain.link/rinkeby' >link.</Link></Text>
+                <Text mb={5} as={'p'} fontSize={20}>When you start the game you will need to choose a character, you can choose one of those listed on the platform (keep in mind that not all are the same, they differ a lot in their attributes). For this you will need to mint your own NFT which you will use during the game… But be careful! You will only be able to mint a single NFT character with your wallet, you will not be able to reselect another one so choose carefully.</Text>
+                <Text mb={5} as={'p'} fontSize={20}>Once you have your character you can start playing, the objective is to defeat the cruel opponent, but it is unlikely that you can do it alone, so you will need to invite your friends to select their own characters and to help you defeat him.</Text>
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem>
@@ -266,7 +266,10 @@ export default function Home () {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4} w={'100%'}>
-                  <Text mb={5} as={'p'} fontSize={20}>The rules of the game are quite simple, each character has three attributes, these are: ❤ the character's hp, ⚔ is the damage your character does when attacking and 🛡 which is the defense it has. Keep in mind that defense is a bonus that your character has since the boss does not have that privilege, although if we see his hp points we are facing an enemy that is very difficult to take down.</Text>
+                  <Text mb={5} as={'p'} fontSize={20}>The rules of the game are quite simple, each character has three attributes. These are:</Text>
+                  <Text mb={5} as={'p'} fontSize={20}>❤ the character's hp, ⚔ is the damage your character does when attacking and 🛡 which is the defense it has. Keep in mind that defense is a bonus that your character has and the boss does not. </Text>
+                  <Text mb={5} as={'p'} fontSize={30} textAlign = 'center'> <b>Buckle up, guys! 💪</b> </Text>
+                  <Text mb={5} as={'p'} fontSize={20} textAlign = 'center'> <i>We are facing an enemy that is very difficult to take down.</i> </Text>
                   <Text mb={5} as={'p'} fontSize={20}>To attack the boss you first need to choose a power, you can select one of these three: 🔥 fire, 💧 water and 🌿 vegetation. Each of them is good against 1 but weak against another.</Text>
                   <Flex
                     align={'center'}
@@ -276,7 +279,7 @@ export default function Home () {
                   >
                     <Image src={powers.src} boxSize={'xl'} alt={'rules'} />
                   </Flex>
-                  <Text mb={5} as={'p'} fontSize={20}>Every time we select a power and attack the boss, the boss will also select one of them, the winner will have the chance to attack and cause damage to the other.</Text>
+                  <Text mb={5} as={'p'} fontSize={20}>Whenever we select power and attack the boss, the enemy will also choose one of them, and the person with higher power will have the chance to attack and cause damage to the other.</Text>
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
